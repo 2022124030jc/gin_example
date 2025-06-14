@@ -3,7 +3,8 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/2022124030jc/gin_example/pkg/setting"
+	"github.com/2022124030jc/gin-blog/pkg/setting"
+	v1 "github.com/2022124030jc/gin-blog/routers/api/v1"
 )
 
 func InitRouter() *gin.Engine {
@@ -20,6 +21,19 @@ func InitRouter() *gin.Engine {
 			"message": "test",
 		})
 	})
+
+	// v1 路由组
+	apiv1 := r.Group("/api/v1")
+	{
+		//获取标签列表
+		apiv1.GET("/tags", v1.GetTags)
+		//新建标签
+		apiv1.POST("/tags", v1.AddTag)
+		//更新指定标签
+		apiv1.PUT("/tags/:id", v1.EditTag)
+		//删除指定标签
+		apiv1.DELETE("/tags/:id", v1.DeleteTag)
+	}
 
 	return r
 }
