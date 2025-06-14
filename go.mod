@@ -9,8 +9,6 @@ require (
 	github.com/unknwon/com v1.0.1
 )
 
-require github.com/EDDYCJY/go-gin-example v0.0.0-20201228125222-28f372bf41f9
-
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
