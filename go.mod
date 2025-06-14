@@ -2,7 +2,12 @@ module gin_example
 
 go 1.21.0
 
-require github.com/gin-gonic/gin v1.10.1
+require (
+	github.com/EDDYCJY/go-gin-example v0.0.0-20201228125222-28f372bf41f9
+	github.com/gin-gonic/gin v1.10.1
+	github.com/go-ini/ini v1.67.0
+	github.com/unknwon/com v1.0.1
+)
 
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect
